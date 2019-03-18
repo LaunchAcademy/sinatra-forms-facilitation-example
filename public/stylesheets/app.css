@@ -1,0 +1,17 @@
+.form-border {
+  margin: 15px;
+  padding: 15px;
+  border-style: solid;
+  border-width: thick;
+  border-radius: 20px;
+  border-color: green;
+}
+
+.input-border {
+  margin: 15px;
+  padding: 15px;
+  border-style: dashed;
+  border-width: thick;
+  border-radius: 20px;
+  border-color: blue;
+}
