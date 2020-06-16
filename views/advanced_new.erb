@@ -1,0 +1,47 @@
+<h1>
+  New Greetings Form
+</h1>
+
+
+<form action='/greetings' method='post' class="form-border">
+  <p class="input-border">
+    <label for='first_name_input'>What is your first name?</label>
+    <input type='text' name='first_name' id='first_name_input'  required  >
+  </p>
+
+  <p class="input-border">
+    <label for='message_input'>Do you want to leave a message?</label>
+    <textarea name='message' id='message_input' maxlength='15'></textarea>
+  </p>
+
+  <p class="input-border">
+    <select name='state'>
+      <option value='MA'>Massachusetts</option>
+      <option value='RI'>Rhode Island</option>
+    </select>
+  </p>
+
+  <p class="input-border">
+    <label>
+      <input type='radio' name='res-status' value='resident'>
+        Resident
+    </label>
+    <label>
+      <input type='radio' name='res-status' value='nonresident'>
+        Nonresident
+    </label>
+  </p>
+
+<!-- This should be built out more fully so that params can hold multiple selections -- you'll learn how to do this later! -->
+  <p class="input-border">
+    <input type='checkbox' name='suffix' value='Jr'> Jr
+    <br/>
+    <input type='checkbox' name='suffix' value='Sr'> Sr
+    <br/>
+    <input type='checkbox' name='suffix' value='Dr'> Dr
+  </p>
+
+  <p class="input-border">
+    <input type='submit' value='Submit your form'>
+  </p>
+</form>
