@@ -14,9 +14,13 @@ end
 
 # ------
 
-get "/greetings" do
-  @greetings = CSV.readlines("greetings.csv")
+get "/" do 
+  redirect "/greetings"
+end
 
+get "/greetings" do 
+  @greetings = CSV.readlines("greetings.csv", headers: true)
+    
   erb :index
 end
 
@@ -25,13 +29,12 @@ get '/greetings/new' do
 end
 
 post '/greetings' do
-  new_message = params[:message_body]
-  new_message_type = params[:message_type]
-
+  new_greeting = params[:greeting_name]
+  new_greeting_loudness = params[:greeting_loudness]
 
   CSV.open("greetings.csv", "a") do |csv|
-    csv << [new_message, new_message_type]
+    csv << [new_greeting, new_greeting_loudness]
   end
 
-  redirect '/greetings'
+  redirect "/greetings"
 end

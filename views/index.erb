@@ -3,6 +3,8 @@
 
 <% @greetings.each do |greeting| %>
   <li>
-    <%= greeting[0] %> | <%= greeting[1] %>
+    <%= greeting["greeting_name"] %> | <%= greeting["greeting_loudness"] %>
   </li>
 <% end %>
+
+<a href="/greetings/new"> Add New Greeting </a>
